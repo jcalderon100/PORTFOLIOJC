@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Julio Calderón | Portafolio</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Julio Calderon - Portafolio">
+    <meta name="keywords" content="portafolio, cv , julio calderon, mazatlan">
+    <meta name="author" content="julioCalderon">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/portfolio/logo/FAVICON IWEB.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/portfolio/logo/FAVICON IWEB.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/portfolio/logo/FAVICON IWEB.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/portfolio/logo/FAVICON IWEB.png" color="#6366f1">
+    <link rel="shortcut icon" href="assets/img/portfolio/logo/FAVICON IWEB.png">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+
+    </script>
+
+
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo2.png" width="47" alt="Silicon">
+            PORTAFOLIO 
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#hero" class="nav-link" aria-current="page">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link" aria-current="page">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#portfolio" class="nav-link" aria-current="page">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#services" class="nav-link" aria-current="page">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#ads" class="nav-link" aria-current="page">Skills</a>
+                </li>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="#contact" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-send fs-4 lh-1 me-1"></i>
+                &nbsp;Contactar
+              </a>
+            </div>      
+          </div>
+          <div class="pe-lg-1 ms-auto me-4" data-bs-theme="dark">
+            <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
+              <input type="checkbox" class="form-check-input" id="theme-mode">
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          
+
+          <a href="#contact" class="btn btn-success btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-send"></i>
+            &nbsp;Contactar
+          </a>
+          
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section id="hero" class="min-vh-100 bg-dark bg-size-cover bg-repeat-0 bg-position-center position-relative overflow-hidden py-5 mb-5" style="background-image: url(assets/img/hero/bg.jpg);"data-bs-theme="dark">
+        <div class="container pt-lg-3">
+          <div class="row flex-lg-nowrap">
+            <div class="col-lg-7 col-xl-6 col-xxl-5 text-center text-lg-start pt-4 pt-md-5 mt-xxl-4">
+              <p class="text-body lead pt-5 mt-sm-2 mt-lg-4 mt-xl-5">Hey que tal! soy</p>
+              <h1 class="display-3 pb-md-2 mb-2">Julio C.</h1>
+              <p class="text-body lead mt-sm-2 mt-lg-4">Lic. en Marketing & Desarrollador Web</p>
+              <div class="mt-n4 ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+                <a href="#contact" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                  Contactar
+                  <i class="bx bx-play ms-1 lead"></i>
+                </a>
+                <a href="#portfolio" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                  Ver portafolio
+                  <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+                </a>
+              </div>
+              <div class="swiper-slider mx-auto mt-5 pt-xl-5 pt-lg-2 pt-xl-4" style="max-width: 33rem;">
+                <div class="swiper" data-swiper-options='{
+                  "slidesPerView": 1,
+                  "effect": "coverflow",
+                  "centeredSlides": true,
+                  "loop": true,
+                  "speed": 650,
+                  "coverflowEffect": {
+                    "rotate": 0,
+                    "stretch": 0,
+                    "depth": 560,
+                    "modifier": 1,
+                    "slideShadows": true
+                  },
+                  "autoplay": {
+                    "delay": 6000,
+                    "disableOnInteraction": false
+                  },
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "fraction"
+                  },
+                  "navigation": {
+                    "prevEl": ".btn-prev",
+                    "nextEl": ".btn-next"
+                  }
+                }'>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/hero img/1.png" width="434" alt="Slider image" class="d-block mx-auto rounded-3">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/hero img/2.png" width="434" alt="Slider image" class="d-block mx-auto rounded-3">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/hero img/3.png" width="434" alt="Slider image" class="d-block mx-auto rounded-3">
+                    </div>
+                  </div>
+
+                  <!-- Prev/Next buttons + count -->
+                  <div class="d-flex justify-content-center align-items-center pb-3 pt-4 mt-3">
+                    <button type="button" class="btn btn-prev btn-icon position-relative top-0 mt-0 ms-0 me-2" style="transform: none;" aria-label="Previous">
+                      <i class="bx bx-chevron-left"></i>
+                    </button>
+                    <div class="swiper-pagination text-light opacity-70 fs-sm fw-medium position-relative top-0 w-auto" style="min-width: 70px;"></div>
+                    <button type="button" class="btn btn-next btn-icon position-relative top-0 mt-0 ms-2 me-0" style="transform: none;" aria-label="Next">
+                      <i class="bx bx-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured image -->
+            <div class="d-none d-lg-block pt-5 mt-lg-4 mt-xl-5 ms-lg-n5 mx-xl-0">
+              <img src="assets/img/hero img/4.png" class="d-block pt-xxl-4 mt-5" width="1058" alt="Hero image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="container mb-5 pt-md-1 pt-lg-4 pt-xl-5">
+        <div class="mt-4 py-2 pb-sm-3 pb-md-4 pb-lg-5 mx-auto text-center" style="max-width: 46.625rem;">
+          <h2 class="h1 mb-4">Un poco de mi</h2>
+          <p class="mb-4">Aqui te cuento un poco de mi vida educativa y profesional.</p>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps steps-center steps-sm steps-horizontal-lg" style="--si-steps-number-size-sm: 1.5rem; --si-steps-number-inner-size-sm: 1rem; --si-steps-number-bg: rgba(99,102,241,.2); --si-steps-number-inner-bg: #6366f1;">
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 30rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2012</h3>
+              <p class="mb-0">Culmino mis estudios en la univerdad Autonoma de Durango en la Carrera de Mercadotecnia y Publicidad.</p>
+            </div>
+          </div>
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 30rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2013</h3>
+              <p class="mb-0">Trabajo en la Constructora GIG - en el Area de Facturación.</p>
+            </div>
+          </div>
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 30rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2014</h3>
+              <p class="mb-0">Trabajo en el Gobierno Federal en las Oficinas de la Comisión Nacional de Pesca y Acuacultura.</p>
+            </div>
+          </div>
+
+          
+        
+        </div>
+
+        <div class="container mb-5"></div>
+
+        <div class="steps steps-center steps-sm steps-horizontal-lg" style="--si-steps-number-size-sm: 1.5rem; --si-steps-number-inner-size-sm: 1rem; --si-steps-number-bg: rgba(99,102,241,.2); --si-steps-number-inner-bg: #6366f1;">
+
+          <!-- Step -->
+
+          <div class="step w-100 mx-auto" style="max-width: 30rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+              <div class="step-body">
+                <h3 class="mb-3">2021</h3>
+                <p class="mb-0">Inicio mi propio negocio de desarrollo de Viviendas.</p>
+              </div>
+            </div>
+
+          <div class="step w-100 mx-auto" style="max-width: 30rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2022</h3>
+              <p class="mb-0">Inicio curso para aprender programación en desarrollo WEB en la universidad UTEL.</p>
+            </div>
+          </div>
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 30rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2023</h3>
+              <p class="mb-0">Culmino curso y empiezo negocio propio en venta de sitios web y manejo de redes sociales.</p>
+            </div>
+          </div>
+
+        
+        </div>
+
+    
+      </section>
+
+
+      <!-- CV -->
+      <section class="container mb-5 pt-md-3 pt-lg-4 pt-xl-5">
+        <div class="pt-2 pt-sm-4 pb-md-3 mb-4 mt-lg-1 mt-xl-3 mx-auto text-center" style="max-width: 47rem;">
+          <h2 class="h1 mb-4">Te dejo mi CV</h2>
+          <p class="mb-3">Aqui se muestra mas a detalle las actividades realizadas en cada uno de mis puestos de trabajo.</p>
+          <a href="assets/pdf/CV_JULIOCALDERON2024_ESP2.pdf" target="_blank" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="pdf">
+            Descargar CV
+            <i class="bx bx-play ms-1 lead"></i>
+          </a>
+        </div>
+      </section>
+
+
+      <!-- portfolio (Grid) -->
+      <section id="portfolio" class="container text-center pt-5 pb-5 mt-2 mt-md-4 mt-lg-5">
+        <h2 class="h1 pt-2 pt-lg-0">Portafolio</h2>
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+
+          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+            <h3 class="h5 mt-4 mb-3">
+              Diseño Web | para Renta de Yate</a>
+            </h3>
+            <img src="assets/img/portfolio/PARADISE.png" class="b-block border rounded-3 shadow-sm" alt="paradise">
+            <div class="ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+              <a href="https://www.paradisemazatlan.com/" target="_blank" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                Sitio Web
+                <i class="bx bx-play ms-1 lead"></i>
+              </a>
+              <a href="https://github.com/jcalderon100/Paradise" target="_blank" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                Ver Repositorio
+                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+            <h3 class="h5 mt-4 mb-3">
+              Diseño Web | Agencia Marketing</a>
+            </h3>
+            <img src="assets/img/portfolio/AGENCIA.png" class="b-block border rounded-3 shadow-sm" alt="agencia">
+            <div class="ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+              <a href="https://www.iweb.com.mx/" target="_blank" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                Sitio Web
+                <i class="bx bx-play ms-1 lead"></i>
+              </a>
+              <a href="https://github.com/jcalderon100/iWEB" target="_blank" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                Ver Repositorio
+                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+            <h3 class="h5 mt-4 mb-3">
+              CRUD | REACT | NODEJS | MYSQL </a>
+            </h3>
+            <img src="assets/img/portfolio/CRUD.png" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.1">
+            <div class="ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+              <a href="https://crud-empleados-jcalderon100.netlify.app/" target="_blank" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                Link DEMO
+                <i class="bx bx-play ms-1 lead"></i>
+              </a>
+              <a href="https://github.com/jcalderon100/CRUD-REACT" target="_blank" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                Ver Repositorio
+                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+            <h3 class="h5 mt-4 mb-3">
+              Landing Page | REAL STATE AGENT</a>
+            </h3>
+            <img src="assets/img/portfolio/DESARROLLO.png" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.1">
+            <div class="ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+              <a href="#" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                Sitio Web
+                <i class="bx bx-play ms-1 lead"></i>
+              </a>
+              <a href="#portfolio" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                Ver Repositorio
+                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+            <h3 class="h5 mt-4 mb-3">
+              Landing Page | ABOGADO JG </a>
+            </h3>
+            <img src="assets/img/portfolio/DESARROLLO.png" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.1">
+            <div class="ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+              <a href="#" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                Sitio Web
+                <i class="bx bx-play ms-1 lead"></i>
+              </a>
+              <a href="#portfolio" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                Ver Repositorio
+                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col card-hover shadow-none bg-none position-relative mb-4 mb-lg-5">
+            <h3 class="h5 mt-4 mb-3">
+              Landing Page | CONTADOR </a>
+            </h3>
+            <img src="assets/img/portfolio/DESARROLLO.png" class="b-block border rounded-3 shadow-sm" alt="Mobile App Showcase v.1">
+            <div class="ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+              <a href="#" class="btn btn-lg btn-primary mt-lg-4 mt-3 ms-lg-4 ms-3" data-bs-toggle="video">
+                Sitio Web
+                <i class="bx bx-play ms-1 lead"></i>
+              </a>
+              <a href="#portfolio" class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                Ver Repositorio
+                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+              </a>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+
+      <!-- Services -->
+      <div id="services" class="container text-center pb-4 pb-md-5 mb-3">
+      <h2 class="h1 pt-2 pt-lg-0">Te apoyare en tareas como</h2>
+      
+      </div>
+
+      <section class="pb-5 mb-2 mb-md-4 mb-lg-5" style="padding-top: 80px;">
+
+        <div class="bg-secondary pb-lg-4 pb-xl-5">
+          
+          <div class="container pb-4 pb-md-5">
+            
+            <div class="row">
+              <div class="col-xl-5 col-lg-6" style="margin-top: -80px;">
+
+                <!-- Swiper tabs -->
+                <div class="swiper-tabs mx-auto" style="max-width: 526px;">
+                  <div id="image-1" class="swiper-tab active">
+                    <img src="assets/img/portfolio/help/1.png" class="rounded-3" alt="Image">
+                  </div>
+                  <div id="image-2" class="swiper-tab">
+                    <img src="assets/img/portfolio/help/2.png" class="rounded-3" alt="Image">
+                  </div>
+                  <div id="image-3" class="swiper-tab">
+                    <img src="assets/img/portfolio/help/3.png" class="rounded-3" alt="Image">
+                  </div>
+                  <div id="image-4" class="swiper-tab">
+                    <img src="assets/img/portfolio/help/4.png" class="rounded-3" alt="Image">
+                  </div>
+                  <div id="image-5" class="swiper-tab">
+                    <img src="assets/img/portfolio/help/5.png" class="rounded-3" alt="Image">
+                  </div>
+                  <div id="image-6" class="swiper-tab">
+                    <img src="assets/img/portfolio/help/6.png" class="rounded-3" alt="Image">
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-6 offset-xl-1 pt-2 pt-md-4 pt-lg-5 mt-4">
+
+                <!-- Slider prev/next buttons -->
+                <div class="d-flex justify-content-center justify-content-lg-start pb-3 mb-3">
+                  <button type="button" id="prev" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                    <i class="bx bx-chevron-left"></i>
+                  </button>
+                  <button type="button" id="next" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                    <i class="bx bx-chevron-right"></i>
+                  </button>
+                </div>
+
+                <!-- Swiper slider -->
+                <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+                  "spaceBetween": 30,
+                  "loop": true,
+                  "tabs": true,
+                  "navigation": {
+                    "prevEl": "#prev",
+                    "nextEl": "#next"
+                  }
+                }'>
+                  <div class="swiper-wrapper text-center text-lg-start">
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-1">
+                      <h2 class="h1 mb-4">Diseño y <span class="text-info">Desarrollo Web</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">Te apoyare en crear sitios web con diseños atractivos y simples enfoncados principalmente a la experiencia de usuario, destacando el servicio o producto ganador en su contenido.</p>
+                      <a href="#contact" class="btn btn-info btn-lg shadow-info">Contactar</a>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-2">
+                      <h2 class="h1 mb-4">Credibilidad y <span class="text-warning">Profesionalismo</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">Cuento un experiencia profesional en diversos sectores y se de antemano que cualquier tarea que se realice se debe de realizar de manera profesional
+                        ya que se debe de cuidar la credibilidad de cualquier negocio con el que se colabore.</p>
+                      <a href="#" class="btn btn-warning btn-lg shadow-warning">Contactar</a>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-3">
+                      <h2 class="h1 mb-4">Marketing y <span class="text-success">Digital</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">Te apoyare si asi lo requieres en promocionar tus productos o servicios, por medio estrategias de marketing digital para llegar a un público más amplio.</p>
+                      <a href="#" class="btn btn-success btn-lg shadow-success">Contactar</a>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-4">
+                      <h2 class="h1 mb-4">Trabajo en <span class="text-danger">Equipo</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">He participado activamente en proyectos donde la cooperación y la comunicación son esenciales para alcanzar los objetivos.</p>
+                      <a href="#" class="btn btn-danger btn-lg shadow-danger">Contactar</a>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-5">
+                      <h2 class="h1 mb-4">Adaptabilidad a <span class="text-info">Equipos</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">Cuento con la capacidad de adaptarme fácilmente a dinámicas de equipo diversas y trabajar con personas de diferentes habilidades y perspectivas.</p>
+                      <a href="#" class="btn btn-info btn-lg shadow-info">Contactar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media -->
+      <section id="ads" class="container pt-lg-2 pt-xl-3 pb-3 pb-xl-5 mt-n2 mt-sm-0 mb-4 mb-md-4 mb-lg-5">
+      <div class="row pb-xl-3">
+
+        <!-- Parallax Effect -->
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="position-relative" style="max-width: 348px;">
+            <img src="assets/img/social/phone.png" alt="Phone">
+            <div class="rellax position-absolute top-0" data-rellax-vertical-scroll-axis="x" data-rellax-horizontal-speed="0.55" data-disable-parallax-down="lg" style="max-width: 500px; right: -3.75rem;">
+              <img src="assets/img/social/card.png" alt="Card">
+            </div>
+          </div>
+        </div>
+
+        <!-- Meta Ads -->
+        <div class="col-lg-7">
+          <h2 class="h1 text-center text-md-start mb-4">Marketing Digital</h2>
+          <p class="fs-lg text-center text-md-start mb-4 mb-xl-5">
+            Ademas de desarrollar sitios web, tambien podré apoyarte a generar prospectos y contactos a través de campañas publicitarias 
+            por medio de: </p>
+          <div class="row row-cols-1 row-cols-sm-2 pt-2 pt-sm-3 pt-xl-2">
+
+            <!-- Item -->
+            <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+              <div class="d-flex align-items-start pe-xl-3">
+                <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-2 mb-3">
+                  <img src="assets/img/feactures/1.png" alt="Icon">
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Copys</h3>
+                  <p class="mb-0">redacción de copys atractivos</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+              <div class="d-flex align-items-start ps-xl-3">
+                <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-2 mb-3">
+                  <img src="assets/img/feactures/2.png" alt="Icon">
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Campañas</h3>
+                  <p class="mb-0">Elaboración de campañas publicitarias por medio de META Ads [ facebook & instagram].</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+              <div class="d-flex align-items-start pe-xl-3">
+                <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-2 mb-3">
+                  <img src="assets/img/feactures/4.png" alt="Icon">
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Anuncios</h3>
+                  <p class="mb-0">Creación de anuncios publicitarios atractivos.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+              <div class="d-flex align-items-start ps-xl-3">
+                <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-2 mb-3">
+                  <img src="assets/img/feactures/5.png" alt="Icon">
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Cuentas Publicitarias</h3>
+                  <p class="mb-0">Creacion y verificación de Cuentas Publicitarias.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+              <div class="d-flex align-items-start pe-xl-3">
+                <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-2 mb-3">
+                  <img src="assets/img/feactures/3.png" alt="Icon">
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Segmentación</h3>
+                  <p class="mb-0">Segmentación de clientes en Facebook e Instagram.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+              <div class="d-flex align-items-start ps-xl-3">
+                <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-2 mb-3">
+                  <img src="assets/img/feactures/6.png" alt="Icon">
+                </div>
+                <div class="ps-4 ps-sm-3 ps-md-4">
+                  <h3 class="h5 pb-1 mb-2">Reportes</h3>
+                  <p class="mb-0">Entrega de resultados semanales.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      </section>
+
+      <!-- Technologies -->
+      <section id="skills" class="container mb-5 pb-lg-5 pb-md-4 pb-4">
+          <h2 class="h1 mb-lg-4 mb-5 text-center" >Stacks y Frameworks</h2>
+        </div>
+
+        <!-- Swiper slider -->
+        <div class="swiper mb-xl-3 text-center" data-swiper-options='{
+          "spaceBetween": 24,
+          "autoplay": true,
+          "breakpoints": {
+            "0": {
+              "slidesPerView": 2
+            },
+            "500": {
+              "slidesPerView": 3
+            },
+            "768": {
+              "slidesPerView": 4
+            },
+            "1200": {
+              "slidesPerView": 6
+            }
+          },
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Swiper item -->
+            <div class="swiper-slide">
+              <div class="mb-3 mt-5">
+                <img src="assets/img/javascript-logo-60-b.png" alt="Logo" class="d-dark-mode-none d-inline-block">
+                <img src="assets/img/javascript-logo-60-l.png" alt="Logo" class="d-dark-mode-inline-block d-none">
+              </div>
+              <span class="text-body">Javascript</span>
+            </div>
+
+            <!-- Swiper item -->
+            <div class="swiper-slide">
+              <div class="mb-3 mt-5">
+                <img src="assets/img/nodejs-logo-60-b.png" alt="Logo" class="d-dark-mode-none d-inline-block">
+                <img src="assets/img/nodejs-logo-60-l.png" alt="Logo" class="d-dark-mode-inline-block d-none">
+              </div>
+              <span class="text-body">Node.JS</span>
+            </div>
+
+            <!-- Swiper item -->
+            <div class="swiper-slide">
+              <div class="mb-3 mt-5">
+                <img src="assets/img/react-logo-60-b.png" alt="Logo" class="d-dark-mode-none d-inline-block">
+                <img src="assets/img/react-logo-60-l.png" alt="Logo" class="d-dark-mode-inline-block d-none">
+              </div>
+              <span class="text-body">React</span>
+            </div>
+
+            <!-- Swiper item -->
+            <div class="swiper-slide">
+              <div class="mb-3 mt-5">
+                <img src="assets/img/bootstrap-logo-60-b.png" alt="Logo" class="d-dark-mode-none d-inline-block">
+                <img src="assets/img/bxl-bootstrap-li.png" alt="Logo" class="d-dark-mode-inline-block d-none">
+              </div>
+              <span class="text-body">Bootstrap</span>
+            </div>
+
+            <!-- Swiper item -->
+            <div class="swiper-slide">
+              <div class="mb-3 mt-5">
+                <img src="assets/img/html5-logo-60-b.png" alt="Logo" class="d-dark-mode-none d-inline-block">
+                <img src="assets/img/html5-logo-60.png" alt="Logo" class="d-dark-mode-inline-block d-none">
+              </div>
+              <span class="text-body">HTML</span>
+            </div>
+
+            <!-- Swiper item -->
+            <div class="swiper-slide">
+              <div class="mb-3 mt-5">
+                <img src="assets/img/bxl-css3-b.png" alt="Logo" class="d-dark-mode-none d-inline-block">
+                <img src="assets/img/bxl-css3-l.png" alt="Logo" class="d-dark-mode-inline-block d-none">
+              </div>
+              <span class="text-body">CSS</span>
+            </div>
+          </div>
+
+          <!-- Swiper pagination -->
+          <div class="swiper-pagination position-static mt-4 pt-lg-3 pt-2"></div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="position-relative pt-5" style="background-color: #151922;" data-bs-theme="dark">
+
+        <!-- Content -->
+        <div class="container position-relative zindex-2 pt-5 pb-2 pb-md-0">
+          
+          <div class="row justify-content-center pt-3 mt-3">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+              <h1 class="mb-4">Estas list@?</h1>
+              <p class="text-body fs-lg pb-3 mb-3">Trabajemos juntos, si lo deseas puedes cotactarme por correo electronico o si gustas llamar por telefono no hay problema, en cualquiera de las opciones te atendere de forma inmediata. </p>
+              <div class="d-flex justify-content-center">
+                <a href="https://github.com/jcalderon100" target="_blank" class="btn btn-icon btn-secondary btn-git rounded-circle mx-3" aria-label="github">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/julio-c-0b060522b/" target="_blank" class="btn btn-icon btn-secondary btn-linkedin rounded-circle mx-3" aria-label="linkedin">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="mailto:julio.calderon.100@gmail.com" class="btn btn-icon btn-secondary btn-google rounded-circle mx-3" aria-label="gmail">
+                  <i class="bx bxl-gmail"></i>
+                </a>
+                <a href="https://www.facebook.com/iwebmazatlan" class="btn btn-icon btn-secondary btn-facebook rounded-circle mx-3" aria-label="facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom shape -->
+        <div class="d-flex position-absolute top-100 start-0 w-100 overflow-hidden mt-n5" style="color: #151922;">
+          <div class="position-relative start-50 translate-middle-x flex-shrink-0 mt-n5 mt-md-n3 mt-lg-n1" style="width: 3788px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="3788" height="144" viewBox="0 0 3788 144"><path fill="currentColor" d="M0,0h3788.7c-525,90.2-1181.7,143.9-1894.3,143.9S525,90.2,0,0z"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Email + Phone -->
+      <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+        <div class="row justify-content-center pt-5 pb-1 pb-sm-2 pb-md-3">
+          <div class="col-xxl-8 col-xl-9 col-lg-10 pt-sm-2 pt-md-5">
+            <div class="d-sm-flex">
+              <div class="d-flex flex-column w-sm-50 border-0 bg-transparent text-center px-sm-1 px-md-5 pb-3 pb-sm-0 mb-4 mb-sm-0">
+                <div class="card-body p-0">
+                  <div class="d-inline-block bg-secondary text-danger rounded-circle fs-3 lh-1 p-3 mb-3">
+                    <i class="bx bx-envelope"></i>
+                  </div>
+                  <p class="pb-2 pb-sm-3 mb-3">Enviame un correo y te contestare de inmediato.</p>
+                </div>
+                <div class="card-footer border-0 p-0">
+                  <a href="mailto:julio.calderon.100@gmail.com" class="btn btn-lg btn-danger">Enviar Correo</a>
+                </div>
+              </div>
+              <div class="vr text-border d-none d-sm-inline-block m-4"></div>
+              <div class="card w-sm-50 border-0 bg-transparent text-center px-sm-1 px-md-5">
+                <div class="card-body p-0">
+                  <div class="d-inline-block bg-secondary text-success rounded-circle fs-3 lh-1 p-3 mb-3">
+                    <i class="bx bx-phone-call"></i>
+                  </div>
+                  <p class="pb-2 pb-sm-3 mb-3">Estoy listo para atender tu llamada.</p>
+                </div>
+                <div class="card-footer border-0 p-0">
+                  <a href="tel:+526699333929" class="btn btn-lg btn-success">LLamar&nbsp;ahora</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Credits -->
+    <section class="position-relative pt-1 pb-3" style="background-color: #151922;" data-bs-theme="dark">
+
+      <!-- Content -->
+      <div class="container position-relative zindex-2 pt-0 pb-0 pb-md-0">
+        
+        <div class="row justify-content-center pt-0 mt-3">
+          <div class="text-center">
+            <p class="text-body fs-lg pb-0 mb-0">Sitio web creado por 🧑🏻‍💻 <a class="text-decoration-none" href="http://www.iweb.com.mx">iWEB | Studio</a> by JC </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Back to top button -->
+      <a href="#hero" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Volver arriba</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+      </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    });
+    </script>
+
+  </body>
+</html>
